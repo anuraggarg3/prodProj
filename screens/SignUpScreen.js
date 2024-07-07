@@ -1,5 +1,6 @@
+// screens/SignUpScreen.js
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, Button } from 'react-native';
 import SignUpForm from '../components/SignUpForm';
 
 const SignUpScreen = ({ navigation }) => {
@@ -7,6 +8,7 @@ const SignUpScreen = ({ navigation }) => {
     <View>
       <Text>Sign Up</Text>
       <SignUpForm navigation={navigation} />
+      <Button title="Already have an account? Log in" onPress={() => navigation.navigate('Login')} />
     </View>
   );
 };

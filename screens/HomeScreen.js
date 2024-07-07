@@ -1,10 +1,15 @@
 import React from 'react';
-import { View, Text } from 'react-native';
-
-const HomeScreen = () => {
+import { View, Text, Button } from 'react-native';
+import { useNavigation } from '@react-navigation/native'; 
+const HomeScreen = ({ navigation }) => {
+  // const navigation = useNavigation(); 
   return (
-    <View>
-      <Text>Welcome to the Home Screen!</Text>
+    <View style={{backgroundColor:'#FFE9C8',flex:1}}>
+      <Text>Welcome to the Homed Screen!</Text>
+      <Button
+        title="Go Live"
+        onPress={() => navigation.navigate('LiveView')}
+      />
     </View>
   );
 };

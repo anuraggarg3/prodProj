@@ -8,7 +8,6 @@ const SplashScreen = ({ navigation }) => {
     const checkAuthStatus = async () => {
       const token = await AsyncStorage.getItem('userToken');
       if (token) {
-        console.log(token);
         navigation.navigate('Home');
       } else {
         navigation.navigate('SignUp');
